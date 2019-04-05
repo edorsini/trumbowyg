@@ -20,7 +20,7 @@ $(function() {
   async function init() {
     $('#trumbowyg-demo')
     .trumbowyg({
-      btns: ['mittemplate'],
+      btns: ['mittemplate', 'emoji'],
       plugins: {
         templates: await getTemplates()
       }
