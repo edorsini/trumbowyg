@@ -6,7 +6,7 @@ $(function() {
     return new Promise((resolve, reject) => {
       $.ajax({
         type: "GET",
-        url: "https://trumbowyg-api.herokuapp.com/api/templates",
+        url: "https://trumbowyg.herokuapp.com/api/templates",
         success: function(data){
           //console.log(data); 
           resolve(data);
