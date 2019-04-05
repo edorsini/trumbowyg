@@ -67,7 +67,7 @@
 
         $.each(trumbowyg.o.plugins.emoji.emojiList, function (i, emoji) {
             if ($.isArray(emoji)) { // Custom emoji behaviour
-                console.log("gets to THIS 1!");
+                //console.log("gets to THIS 1!");
                 var emojiCode = emoji[0],
                     emojiUrl = emoji[1],
                     emojiHtml = '<img src="' + emojiUrl + '" alt="' + emojiCode + '">',
@@ -86,19 +86,19 @@
                 trumbowyg.addBtnDef(customEmojiBtnName, customEmojiBtnDef);
                 dropdown.push(customEmojiBtnName);
             } else { // Default behaviour
-                console.log("gets to THIS 2!");
+                //console.log("gets to THIS 2!");
                 var btn = emoji.replace(/:/g, ''),
                     defaultEmojiBtnName = 'emoji-' + btn,
                     defaultEmojiBtnDef = {
                         text: emoji,
                         fn: function () {
-                            console.log('hi there1');
+                            //console.log('hi there1');
                             //var encodedEmoji = String.fromCodePoint(emoji.replace("&#", "0"));
-                            console.log('hi there2');
+                            //console.log('hi there2');
                             //trumbowyg.execCmd('insertText', encodedEmoji);
                             //trumbowyg.html('gets 2');
                             //trumbowyg.execCmd('insertHTML', "<p>Hi therei 2</p>");
-                            console.log('qwerty');
+                            //console.log('qwerty');
                             trumbowyg.execCmd('insertHTML', '<span><img src="https://via.placeholder.com/80x10?text='+emoji+'"></span>');
                             return true;
                         }
